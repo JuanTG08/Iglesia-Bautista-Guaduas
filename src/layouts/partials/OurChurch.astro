@@ -1,0 +1,40 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+---
+
+<section class={`section-sm`} id="ubicacion">
+  <div class="container">
+    <div class="row items-center justify-between">
+      <div class={`mb:md-0 md:col-5 md:order-2`}>
+        <ImageMod
+          class="w-full rounded-lg shadow-md"
+          src={"/images/church.jpg"}
+          height={640}
+          width={427}
+          alt={"Creciendo en Dios"}
+          format="webp"
+        />
+      </div>
+      <div class={`md:col-7 lg:col-6 md:order-1 text-center lg:text-left`}>
+        <h2 class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800">
+          Nuestra Iglesia
+        </h2>
+        <p class="text-base md:text-lg mb-2">
+          Somos una Iglesia Bautista Reformada dedicada a glorificar a Dios a
+          través del estudio de Su Palabra, la adoración sincera y el servicio
+          amoroso a nuestra comunidad. Nos encontramos en la
+          <strong>carrera 9 #8-20 sur</strong>, barrio
+          <strong>Villa del Paraíso</strong>, Guaduas, Cundinamarca, Colombia.
+        </p>
+        <a
+          href="/iglesia"
+          class="btn btn-primary w-full md:w-auto justify-center px-6 py-3 text-white shadow-lg transition duration-300 ease-in-out inline-flex gap-2 items-center"
+        >
+          <DynamicIcon className="inline-block text-lg" icon="FaCross" />
+          Conoce más de nuestra iglesia
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

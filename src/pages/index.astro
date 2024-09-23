@@ -1,16 +1,167 @@
 ---
+import ImageMod from "@/components/ImageMod.astro";
+import Base from "@/layouts/Base.astro";
+import CallToCome from "@/partials/CallToCome.astro";
+import GrowingInGod from "@/partials/GrowingInGod.astro";
+import NextEvent from "@/partials/NextEvent.astro";
+import OurChurch from "@/partials/OurChurch.astro";
 
+const { color, title, subtitle } = {
+  color: "white",
+  title: "Iglesia Bautista del Sur Voz de Salvación (IBVS)",
+  subtitle:
+    '"Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra." 2 Timoteo 3:16-17 (RVR60)',
+};
+const textColor = `text-${color}`;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Iglesia Bautista | Voz de Salvación" navPosition="fixed">
+  <main
+    class="snap-y snap-mandatory relative w-full h-full overflow-y-auto overflow-x-hidden scroll-smooth"
+  >
+    <section
+      class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden"
+      data-header-color={color}
+      id="BannerBiblia"
+    >
+      <div
+        class="z-30 relative h-full flex flex-col justify-center items-center"
+      >
+        <header class="container flex flex-col gap-10">
+          <h1
+            class={`${textColor} font-medium text-h3 lg:text-h1 text-balance`}
+          >
+            {title}
+          </h1>
+          <p class={`${textColor} text-xl text-balance`}>
+            {subtitle}
+          </p>
+          <div class="m-0 p-0">
+            <a
+              class="border-[2px] rounded inline-block border-white bg-white/5 backdrop-blur-md text-base font-medium text-white px-12 py-3 hover:bg-white hover:text-black transition-colors"
+              href="/nosotros"
+            >
+              ¿Quienes somos?
+            </a>
+          </div>
+        </header>
+      </div>
+
+      <!-- Superposición oscura -->
+      <div class="absolute top-0 bottom-0 left-0 right-0 z-20 bg-black/60">
+      </div>
+
+      <div class="absolute top-0 bottom-0 h-full w-full z-10">
+        <img
+          src="/images/biblia1.avif"
+          alt="biblia"
+          class="object-center object-cover h-full w-full"
+        />
+      </div>
+    </section>
+
+    <CallToCome />
+    <GrowingInGod />
+    <OurChurch />
+    <NextEvent />
+  </main>
+</Base>
+
+<script>
+  window.addEventListener("load", () => {
+    const navbar = document.getElementById("navbar") as HTMLElement;
+    const navbarToggleShow = document.getElementById(
+      "show-button"
+    ) as HTMLElement;
+    const navbarToggleHidden = document.getElementById(
+      "hide-button"
+    ) as HTMLElement;
+    const logoBlanco = document.getElementById("LogoBlanco") as HTMLElement;
+    const logoMorado = document.getElementById("LogoMorado") as HTMLElement;
+    const buttonContact = document.getElementById(
+      "btn-contacto"
+    ) as HTMLElement;
+    const imageBanner = document.getElementById("BannerBiblia") as HTMLElement;
+    // Obtener las altura del banner
+    const bannerHeight = imageBanner.offsetHeight;
+    // Obtener las altura de la barra de navegación
+    const navbarHeight = navbar.offsetHeight;
+
+    const handlerBackDropBlur = () => {
+      navbar.classList.add("backdrop-blur-xl", "shadow-lg", "text-white");
+      navbar.classList.remove("bg-transparent", "bg-white", "text-black");
+      handlerLogoBlanco();
+      handlerButtonContactWhite();
+      handlerToggleNavbarWhite();
+    };
+
+    const handlerBackDropTransparent = () => {
+      navbar.classList.add("bg-transparent", "text-white");
+      navbar.classList.remove(
+        "backdrop-blur-xl",
+        "shadow-lg",
+        "bg-white",
+        "text-black"
+      );
+      handlerLogoBlanco();
+      handlerButtonContactWhite();
+      handlerToggleNavbarWhite();
+    };
+
+    const handlerNotBackDrop = () => {
+      navbar.classList.add("bg-white", "shadow-lg", "text-black");
+      navbar.classList.remove("bg-transparent", "text-white");
+      logoBlanco.classList.add("hidden");
+      logoMorado.classList.remove("hidden");
+      handlerLogoMorado();
+      handlerButtonContactBlack();
+      handlerToggleNavbarBlack();
+    };
+
+    const handlerLogoBlanco = () => {
+      logoBlanco.classList.remove("hidden");
+      logoMorado.classList.add("hidden");
+    };
+
+    const handlerLogoMorado = () => {
+      logoBlanco.classList.add("hidden");
+      logoMorado.classList.remove("hidden");
+    };
+
+    const handlerButtonContactBlack = () => {
+      buttonContact.classList.add("btn-outline-black");
+      buttonContact.classList.remove("btn-outline-white");
+    };
+
+    const handlerButtonContactWhite = () => {
+      buttonContact.classList.add("btn-outline-white");
+      buttonContact.classList.remove("btn-outline-black");
+    };
+
+    const handlerToggleNavbarWhite = () => {
+      navbarToggleShow.classList.add("fill-white");
+      navbarToggleHidden.classList.add("fill-white");
+      navbarToggleShow.classList.remove("fill-primary");
+      navbarToggleHidden.classList.remove("fill-primary");
+    };
+
+    const handlerToggleNavbarBlack = () => {
+      navbarToggleShow.classList.add("fill-primary");
+      navbarToggleHidden.classList.add("fill-primary");
+      navbarToggleShow.classList.remove("fill-white");
+      navbarToggleHidden.classList.remove("fill-white");
+    };
+
+    // Función que se ejecuta al hacer scroll
+    const handleScroll = () => {
+      // Verificar si el scroll ha pasado el tamaño del banner
+      if (window.scrollY > bannerHeight - navbarHeight) handlerNotBackDrop();
+      else if (window.scrollY >= 60) handlerBackDropBlur();
+      else handlerBackDropTransparent();
+    };
+
+    // Ejecutar la función de scroll cada vez que el usuario se desplace
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+  });
+</script>

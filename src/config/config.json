@@ -1,0 +1,22 @@
+{
+  "site": {
+    "title": "IBAGU",
+    "base_url": "http://localhost",
+    "base_path": "/",
+    "favicon": "/favicon.svg",
+    "logo": "/images/logo.png",
+    "logo_width": "147.84",
+    "logo_height": "60",
+    "trailing_slash": false,
+    "logo_text": "Astroplate"
+  },
+  "settings": {
+    "search": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "system",
+    "pagination": 2,
+    "summary_length": 200,
+    "blog_folder": "blog"
+  }
+}

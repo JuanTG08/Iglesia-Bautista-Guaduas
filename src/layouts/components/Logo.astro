@@ -1,0 +1,24 @@
+---
+import ImageMod from "./ImageMod.astro";
+import config from "@/config/config.json";
+import LogoBlanco from "./Logos/LogoBlanco.astro";
+import LogoMorado from "./Logos/LogoMorado.astro";
+
+const {
+  logo,
+  logo_width,
+  logo_height,
+  logo_text,
+  title,
+}: {
+  logo: string;
+  logo_width: any;
+  logo_height: any;
+  logo_text: string;
+  title: string;
+} = config.site;
+---
+
+<a href="/" class="navbar-brand inline-block">
+  <LogoMorado className="h-20" />
+</a>
