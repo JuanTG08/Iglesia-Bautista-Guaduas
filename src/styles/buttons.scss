@@ -14,10 +14,6 @@
   @apply border-white text-white;
 }
 
-.btn-outline-black {
-  @apply border-primary text-white bg-primary;
-}
-
 .btn-outline-primary {
-  @apply border-primary text-primary hover:bg-primary/10 bg-transparent ;
+  @apply border-primary text-primary bg-transparent ;
 }

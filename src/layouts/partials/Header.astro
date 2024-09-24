@@ -9,7 +9,7 @@ const textColor = `text-${position === "sticky" ? "primary" : "white"}`;
 ---
 
 <header
-  class={`${textColor} bg-transparent z-40 ${position} w-full top-0 justify-between py-2 transition-all duration-100 ease-in-out`}
+  class={`${textColor} ${position == "fixed" ? "bg-transparent" : "bg-white shadow-lg"}  z-40 ${position} w-full top-0 justify-between py-2 transition-all duration-100 ease-in-out`}
   id="navbar"
 >
   <nav class="navbar container">
@@ -104,7 +104,7 @@ const textColor = `text-${position === "sticky" ? "primary" : "white"}`;
     </ul>
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
       <a
-        class="btn btn-sm btn-outline-white btn-md hidden lg:inline-block"
+        class=`btn btn-sm ${position == "fixed" ? "btn-outline-white" : "btn-outline-primary"}  btn-md hidden lg:inline-block`
         href={"/contacto"}
         id="btn-contacto"
       >

@@ -8,6 +8,7 @@
         { "name": "Sobre nosotros", "url": "/nosotros" },
         { "name": "Iglesia", "url": "/iglesia" },
         { "name": "Nuestra doctrina", "url": "/doctrina" },
+        { "name": "Eventos", "url": "/eventos" },
         { "name": "¡Contacto!", "url": "/contacto" }
       ]
     },

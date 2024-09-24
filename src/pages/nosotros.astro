@@ -1,0 +1,58 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Base from "@/layouts/Base.astro";
+---
+
+<Base title="Iglesia Bautista | Voz de Salvación">
+  <section class="section-sm">
+    <div class="container">
+      <h1
+        class="font-bold font-heading leading-tighter tracking-tighter mb-12 md:mb-16 md:text-6xl text-5xl text-center text-balance"
+      >
+        Bienvenidos a su <span class="text-primary underline underline-offset-[12px] md:underline-offset-[16px]">Iglesia</span>
+      </h1>
+      <div class="row items-center justify-between">
+        <div class={`mb:md-0 md:col-6 md:order-1`}>
+          <ImageMod
+            class="w-full rounded-lg shadow-md"
+            src={"/images/read-bible-man.jpg"}
+            width={1024}
+            height={684}
+            alt={"Firmes en la Soberanía de Dios, Guiados por Su Palabra"}
+            format="webp"
+          />
+        </div>
+        <div
+          class={`md:col-7 lg:col-6 md:order-2 text-balance text-center lg:text-left`}
+        >
+          <p class="font-bold text-base text-primary tracking-wide uppercase">
+            SOBRE NOSOTROS
+          </p>
+          <h2 class="text-3xl lg:text-4xl font-extrabold mb-4 text-gray-800">
+            Firmes en la Soberanía de Dios, Guiados por Su Palabra
+          </h2>
+          <blockquote
+            class="italic text-gray-500 lg:text-base mb-4 text-center text-balance"
+          >
+            "Acordaos de las cosas pasadas desde los tiempos antiguos; porque yo
+            soy Dios, y no hay otro Dios, y nada hay semejante a mí, que anuncio
+            lo por venir desde el principio, y desde la antigüedad lo que aún no
+            era hecho; que digo: Mi consejo permanecerá, y haré todo lo que
+            quiero." Isaías 46:9-10 (RVR1960)
+          </blockquote>
+          <p class="mb-8 text-base md:text-lg">
+            Creemos que Dios es soberano sobre todas las cosas, cumpliendo Su
+            voluntad perfecta desde la eternidad hasta la eternidad. Nos guiamos
+            únicamente por Su Palabra, las Sagradas Escrituras, que son
+            suficientes e infalibles para dirigirnos en toda verdad y vida. Tal
+            como declara Isaías 46:9-10, nuestro Dios no solo es el Creador,
+            sino también el Sustentador y Gobernante de todo, y Su consejo
+            prevalecerá sobre los planes de los hombres. Por eso, nos
+            regocijamos en Su gracia soberana y nos esforzamos por vivir en
+            obediencia a Su voluntad revelada en las Escrituras.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
