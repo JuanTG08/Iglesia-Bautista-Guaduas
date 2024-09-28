@@ -57,6 +57,25 @@ const textColor = `text-${color}`;
           class="object-center object-cover h-full w-full"
         />
       </div>
+      <!-- Flecha animada -->
+      <div
+        class="scroll-down-arrow absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 cursor-pointer"
+        id="scrollArrow"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-8 h-8 text-white animate-bounce"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
     </section>
 
     <CallToCome />
@@ -68,6 +87,15 @@ const textColor = `text-${color}`;
 
 <script>
   window.addEventListener("load", () => {
+    const scrollArrow = document.getElementById("scrollArrow") as HTMLElement;
+    if (scrollArrow)
+      scrollArrow.addEventListener("click", () =>
+        window.scrollTo({
+          top: window.innerHeight,
+          behavior: "smooth",
+        })
+      );
+
     const navbar = document.getElementById("navbar") as HTMLElement;
     const navbarToggleShow = document.getElementById(
       "show-button"
