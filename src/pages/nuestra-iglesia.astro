@@ -106,18 +106,14 @@ import Base from "@/layouts/Base.astro";
 
   <section class="section-sm">
     <div class="container">
-      <TimeLine client:load />
-    </div>
-  </section>
-
-  <section class="section-sm bg-gradient">
-    <div class="container">
       <h2
         class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800 text-center"
       >
         Nuestros Valores
       </h2>
-      <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-8 pt-3 w-full">
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-8 pt-3 w-full"
+      >
         <li class="flex flex-col items-center">
           <div class="flex flex-col items-center">
             <DynamicIcon
@@ -192,6 +188,17 @@ import Base from "@/layouts/Base.astro";
           </div>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section-sm bg-gradient">
+    <div class="container">
+        <h2
+          class="text-3xl lg:text-4xl font-extrabold my-4 text-primary text-center mb-10"
+        >
+          Nuestra Historia
+        </h2>
+      <TimeLine client:load />
     </div>
   </section>
 </Base>
