@@ -96,7 +96,7 @@ const AnimatedCircle = ({ icon: Icon, index }: any) => {
 const TimeLine = () => {
   return (
     <div className="mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12 text-[#422874]">
+      <h2 className="text-3xl lg:text-4xl font-extrabold my-4 text-primary text-center">
         Nuestra Historia
       </h2>
       <div className="relative">

@@ -54,6 +54,55 @@ import Base from "@/layouts/Base.astro";
     </div>
   </section>
 
+  <section class={`section bg-indigo-100`}>
+    <div class="container">
+      <div class="grid md:grid-cols-2 mt-16 gap-16 place-items-center">
+        <div class="flex flex-col gap-4 items-center">
+          <ImageMod
+            class="rounded-full h-24 w-24 shadow-md"
+            src={"/images/cross-2.jpg"}
+            width={96}
+            height={96}
+            alt={"Firmes en la Soberanía de Dios, Guiados por Su Palabra"}
+            format="webp"
+          />
+          <h2 class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800">
+            Nuestra Misión
+          </h2>
+          <p class="mb-8 text-base md:text-lg">
+            Nuestra misión es glorificar a Dios mediante la proclamación fiel de
+            Su Palabra, haciendo discípulos de todas las naciones, y edificando
+            una comunidad que vive en santidad, adoración y servicio. Nos
+            comprometemos a predicar el evangelio de Jesucristo, equipar a los
+            creyentes con una fe bíblica sólida, y reflejar el amor de Dios en
+            nuestras vidas diarias.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 items-center">
+          <ImageMod
+            class="rounded-full h-24 w-24 shadow-md"
+            src={"/images/camino.jpg"}
+            width={96}
+            height={96}
+            alt={"Firmes en la Soberanía de Dios, Guiados por Su Palabra"}
+            format="webp"
+          />
+          <h2 class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800">
+            Nuestra Visión
+          </h2>
+          <p class="mb-8 text-base md:text-lg">
+            Nuestra visión es ser una iglesia transformada por la gracia de
+            Dios, que crece en el conocimiento profundo de Su Palabra, y es
+            guiada por el Espíritu Santo para impactar tanto a nuestra comunidad
+            local como a las naciones. Anhelamos ser un faro de luz y verdad,
+            donde cada persona pueda encontrar salvación, esperanza, y comunión
+            en Cristo, viviendo en unidad como cuerpo de creyentes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-sm bg-gradient">
     <div class="container">
       <TimeLine client:load />
