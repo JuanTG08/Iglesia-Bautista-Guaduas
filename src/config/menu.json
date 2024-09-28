@@ -5,9 +5,8 @@
       "name": "Nosotros",
       "hasChildren": true,
       "children": [
-        { "name": "Sobre nosotros", "url": "/nosotros" },
-        { "name": "Iglesia", "url": "/iglesia" },
-        { "name": "Nuestra doctrina", "url": "/doctrina" },
+        { "name": "Nuestra Iglesia", "url": "/nuestra-iglesia" },
+        { "name": "Nuestra doctrina", "url": "/nuestra-doctrina" },
         { "name": "Eventos", "url": "/eventos" },
         { "name": "¡Contacto!", "url": "/contacto" }
       ]
