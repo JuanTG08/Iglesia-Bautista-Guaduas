@@ -3,6 +3,8 @@ import ImageMod from "@/components/ImageMod.astro";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import TimeLine from "@/helpers/TimeLine";
 import Base from "@/layouts/Base.astro";
+import FiveSolas from "@/partials/FiveSolas.astro";
+import OurMision from "@/partials/our-church/OurMision.astro";
 ---
 
 <Base title="Iglesia Bautista, Voz de Salvación | Nuestra Iglesia">
@@ -60,141 +62,7 @@ import Base from "@/layouts/Base.astro";
     </div>
   </section>
 
-  <section class={`section bg-indigo-100`}>
-    <div class="container">
-      <div class="grid md:grid-cols-2 mt-16 gap-16 place-items-center">
-        <div class="flex flex-col gap-4 items-center">
-          <ImageMod
-            class="rounded-full h-24 w-24 shadow-md"
-            src={"/images/cross-2.jpg"}
-            width={96}
-            height={96}
-            alt={"Firmes en la Soberanía de Dios, Guiados por Su Palabra"}
-            format="webp"
-          />
-          <h2 class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800">
-            Nuestra Misión
-          </h2>
-          <p class="text-base md:text-lg">
-            Nuestra misión es glorificar a Dios mediante la proclamación fiel de
-            Su Palabra, haciendo discípulos de todas las naciones, y edificando
-            una comunidad que vive en santidad, adoración y servicio. Nos
-            comprometemos a predicar el evangelio de Jesucristo, equipar a los
-            creyentes con una fe bíblica sólida, y reflejar el amor de Dios en
-            nuestras vidas diarias.
-          </p>
-        </div>
-        <div class="flex flex-col gap-4 items-center">
-          <ImageMod
-            class="rounded-full h-24 w-24 shadow-md"
-            src={"/images/camino.jpg"}
-            width={96}
-            height={96}
-            alt={"Firmes en la Soberanía de Dios, Guiados por Su Palabra"}
-            format="webp"
-          />
-          <h2 class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800">
-            Nuestra Visión
-          </h2>
-          <p class="text-base md:text-lg">
-            Nuestra visión es ser una iglesia transformada por la gracia de
-            Dios, que crece en el conocimiento profundo de Su Palabra, y es
-            guiada por el Espíritu Santo para impactar tanto a nuestra comunidad
-            local como a las naciones. Anhelamos ser un faro de luz y verdad,
-            donde cada persona pueda encontrar salvación, esperanza, y comunión
-            en Cristo, viviendo en unidad como cuerpo de creyentes.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-sm">
-    <div class="container">
-      <h2
-        class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800 text-center"
-      >
-        Nuestros Valores
-      </h2>
-      <ul
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-8 pt-3 w-full"
-      >
-        <li class="flex flex-col items-center">
-          <div class="flex flex-col items-center">
-            <DynamicIcon
-              className="inline-block fill-primary w-10 h-10"
-              icon="FaBookBible"
-            />
-            <p class="text-2xl md:text-lg font-bold my-1">Sola Scriptura</p>
-            <p class="text-lg md:text-sm text-gray-600">
-              Creemos que la Biblia es la Palabra inspirada e infalible de Dios,
-              nuestra única regla de fe y práctica. Todo lo que creemos,
-              enseñamos y hacemos se basa en las Escrituras, que son suficientes
-              y autoritarias.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="flex flex-col items-center">
-            <DynamicIcon
-              className="inline-block fill-primary w-10 h-10"
-              icon="FaCross"
-            />
-            <p class="text-2xl md:text-lg font-bold my-1">Solus Christus</p>
-            <p class="text-lg md:text-sm text-gray-600">
-              Jesucristo es el único mediador entre Dios y los hombres, y la
-              única esperanza de salvación. Su obra en la cruz es suficiente
-              para redimir a los pecadores, y solo en Él encontramos la vida
-              eterna.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="flex flex-col items-center">
-            <DynamicIcon
-              className="inline-block fill-primary w-10 h-10"
-              icon="FaHeart"
-            />
-            <p class="text-2xl md:text-lg font-bold my-1">Sola Gratia</p>
-            <p class="text-lg md:text-sm text-gray-600">
-              La salvación es un regalo inmerecido de Dios, dado únicamente por
-              Su gracia, sin mérito humano. Todo ser humano es incapaz de
-              salvarse a sí mismo; es solo por la gracia de Dios que somos
-              justificados y transformados.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="flex flex-col items-center">
-            <DynamicIcon
-              className="inline-block fill-primary w-10 h-10"
-              icon="FaFire"
-            />
-            <p class="text-2xl md:text-lg font-bold my-1">Sola Fide</p>
-            <p class="text-lg md:text-sm text-gray-600">
-              Somos justificados solo por la fe en Jesucristo, no por nuestras
-              obras. La fe es el medio por el cual recibimos la justicia de
-              Cristo y somos reconciliados con Dios.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="flex flex-col items-center">
-            <DynamicIcon
-              className="inline-block fill-primary w-10 h-10"
-              icon="TbTriangleFilled"
-            />
-            <p class="text-2xl md:text-lg font-bold my-1">Soli Deo Gloria</p>
-            <p class="text-lg md:text-sm text-gray-600">
-              Vivimos para la gloria de Dios. Todo lo que hacemos, desde nuestra
-              adoración hasta nuestras actividades diarias, debe ser para la
-              exaltación de Su nombre y el reflejo de Su carácter santo.
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <OurMision />
 
   <section class="section-sm bg-gradient">
     <div class="container">
