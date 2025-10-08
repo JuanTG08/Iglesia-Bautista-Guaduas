@@ -1,0 +1,9 @@
+---
+const { value, color = "text-gray-800" } = Astro.props;
+---
+
+<h2
+  class=`text-3xl lg:text-4xl font-extrabold my-4 ${color} text-center md:text-left`
+>
+  {value}
+</h2>

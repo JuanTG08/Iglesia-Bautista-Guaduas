@@ -37,9 +37,9 @@ const eventos = [
     descripcion: "Construcción del nuevo templo",
     icon: FaBuilding,
     izquierda: "Capacidad para 250 personas",
-    derecha: "Inversión de $300,000 dolares",
+    derecha: "Nuevo templo",
     detalles:
-      "Gracias a las ayudas de las iglesias bautistas de Estados Unidos y su gran generosidad, logramos la construcción de nuestro templo para Dios.",
+      "Con la visión de expandir el alcance de la iglesia y proporcionar un espacio adecuado para la adoración y el crecimiento espiritual, se inició la construcción de un nuevo templo con capacidad para 250 personas.",
   },
 ];
 
