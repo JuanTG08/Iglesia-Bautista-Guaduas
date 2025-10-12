@@ -17,6 +17,9 @@
     "default_theme": "system",
     "pagination": 2,
     "summary_length": 200,
+    "default_language": "es",
+    "disable_languages": [],
+    "default_language_in_subdir": false,
     "blog_folder": "blog"
   }
 }

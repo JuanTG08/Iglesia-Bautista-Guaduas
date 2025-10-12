@@ -1,0 +1,44 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import type { ContentEntryMap } from "astro:content";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import config from "@/config/config.json";
+
+const BLOG_FOLDER = "blog";
+const { lang } = Astro.params;
+
+const posts = await getSinglePage(BLOG_FOLDER, lang as keyof ContentEntryMap);
+const sortedPosts = sortByDate(posts);
+const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+---
+
+<Base title="Iglesia Bautista, Voz de Salvación | Blog">
+  <section class="section-sm">
+    <div class="container">
+      <h1
+        class="text-primary font-bold font-heading leading-tighter tracking-tighter mb-12 md:mb-16 md:text-6xl text-5xl text-center text-balance"
+      >
+        Blog
+      </h1>
+
+      <div class="row gx-5">
+        <!-- blog posts -->
+        <div class="lg:col-8">
+          <div class="row">
+            {
+              currentPosts.map((post) => (
+                <div class="mb-14 md:col-6">
+                  <BlogCard data={post} />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- sidebar -->
+      </div>
+    </div>
+  </section>
+</Base>

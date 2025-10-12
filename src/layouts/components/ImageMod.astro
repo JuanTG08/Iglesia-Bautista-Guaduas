@@ -14,6 +14,7 @@ interface Props {
   class?: string;
   style?: any;
   id?: string;
+  url?: boolean;
 }
 
 // Destructuring Astro.props to get the component's props
@@ -28,27 +29,41 @@ let {
   format,
   style,
   id,
+  url = false,
 } = Astro.props;
 
-src = `/public${src}`;
+if (!url) src = `/public${src}`;
 
 // Glob pattern to load images from the /public/images folder
-const images = import.meta.glob("/public/images/**/*.{jpeg,jpg,png,gif,avif}");
+const images: any = !url && import.meta.glob("/public/images/**/*.{jpeg,jpg,png,gif,avif}");
 
 // Check if the source path is valid
-const isValidPath = images[src] ? true : false;
+const isValidPath = !url && images[src] ? true : false;
 
 // Log a warning message in red if the image is not found
-!isValidPath &&
+!url && !isValidPath &&
   console.error(
     `\x1b[31mImage not found - ${src}.\x1b[0m Make sure the image is in the /public/images folder.`,
   );
 ---
 
 {
-  isValidPath && (
+  (!url && isValidPath) ? (
     <Image
       src={images[src]() as Promise<{ default: ImageMetadata }>}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={loading}
+      decoding={decoding}
+      class={className}
+      format={format}
+      style={style}
+      id={id}
+    />
+  ) : (
+    <Image
+      src={src}
       alt={alt}
       width={width}
       height={height}
