@@ -5,6 +5,7 @@ import TimeLine from "@/helpers/TimeLine";
 import Base from "@/layouts/Base.astro";
 import FiveSolas from "@/partials/FiveSolas.astro";
 import OurMision from "@/partials/our-church/OurMision.astro";
+import Schedule from "@/partials/Schedule.astro";
 ---
 
 <Base title="Iglesia Bautista, Voz de Salvación | Nuestra Iglesia">
@@ -32,7 +33,9 @@ import OurMision from "@/partials/our-church/OurMision.astro";
           />
         </div>
         <div class={`md:col-7 lg:col-6 md:order-2 text-balance lg:text-left`}>
-          <h2 class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800 text-center md:text-left">
+          <h2
+            class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800 text-center md:text-left"
+          >
             Firmes en la Soberanía de Dios, Guiados por Su Palabra
           </h2>
           <blockquote
@@ -75,4 +78,6 @@ import OurMision from "@/partials/our-church/OurMision.astro";
       <TimeLine client:load />
     </div>
   </section>
+
+  <Schedule />
 </Base>
