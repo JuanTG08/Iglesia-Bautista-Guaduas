@@ -73,5 +73,78 @@ if (theme.fonts.font_family.secondary) {
       <slot />
     </main>
     <Footer />
+    <!-- Small vanilla JS to handle accordions using data-accordion attributes -->
+    <script>
+      (function () {
+        if (typeof window === 'undefined') return;
+
+        function initAccordions(root = document) {
+          const containers = Array.from(root.querySelectorAll('[data-accordion]'));
+          containers.forEach((container) => {
+            // support single-open collapse behavior when data-accordion="collapse"
+            const collapse = container.getAttribute('data-accordion') === 'collapse';
+
+            container.querySelectorAll('[data-accordion-target]').forEach((btn) => {
+              const targetSelector = btn.getAttribute('data-accordion-target');
+              if (!targetSelector) return;
+              const panel = container.querySelector(targetSelector);
+              if (!panel) return;
+              const panelEl = /** @type {HTMLElement} */ (panel);
+
+              // ensure initial aria state
+              btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded') || 'false');
+              if (btn.getAttribute('aria-expanded') === 'true') {
+                panelEl.classList.remove('hidden');
+              } else {
+                panelEl.classList.add('hidden');
+              }
+
+              btn.addEventListener('click', function (e) {
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+                if (collapse) {
+                  // close other panels
+                  container.querySelectorAll('[data-accordion-target]').forEach((other) => {
+                    if (other === btn) return;
+                    const otherTarget = other.getAttribute('data-accordion-target');
+                    if (!otherTarget) return;
+                    const otherPanel = container.querySelector(otherTarget);
+                    const otherPanelEl = otherPanel ? /** @type {HTMLElement} */ (otherPanel) : null;
+                    other.setAttribute('aria-expanded', 'false');
+                    if (otherPanelEl) otherPanelEl.classList.add('hidden');
+                    const otherIcon = other.querySelector('[data-accordion-icon]');
+                    if (otherIcon && otherIcon instanceof HTMLElement) otherIcon.style.transform = 'rotate(180deg)';
+                  });
+                }
+
+                // toggle this
+                btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+                if (isOpen) {
+                  panelEl.classList.add('hidden');
+                } else {
+                  panelEl.classList.remove('hidden');
+                }
+
+                // icon rotation if present
+                const icon = btn.querySelector('[data-accordion-icon]');
+                if (icon && icon instanceof HTMLElement) {
+                  // default markup uses rotate-180 class; we'll just toggle inline transform for reliability
+                  icon.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+              });
+            });
+          });
+        }
+
+        // init on DOMContentLoaded
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function () {
+            initAccordions(document);
+          });
+        } else {
+          initAccordions(document);
+        }
+      })();
+    </script>
   </body>
 </html>
