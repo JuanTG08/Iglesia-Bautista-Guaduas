@@ -1,0 +1,54 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Base from "@/layouts/Base.astro";
+---
+
+<Base title="Iglesia Bautista, Voz de Salvación | Nuestra doctrina">
+  <section class="section-sm">
+    <div class="container">
+      <h1
+        class="font-bold font-heading leading-tighter tracking-tighter mb-12 md:mb-16 md:text-6xl text-5xl text-center text-balance"
+      >
+        Nuestras creencias
+        <span
+          class="text-primary underline underline-offset-[12px] md:underline-offset-[16px]"
+        >
+          doctrinales
+        </span>
+      </h1>
+      <div class="row items-center justify-between">
+        <div class={`mb:md-0 md:col-5 md:order-1 h-80 md:h-[400px]`}>
+          <ImageMod
+            class="w-full rounded-lg shadow-md"
+            src={"https://files.iglesiabautistadelsur.com/images/confesion_fe.avif"}
+            width={1000}
+            height={1646}
+            alt={"Confesión Bautista de Fe de 1689"}
+            format="webp"
+            url={true}
+            class="h-full w-auto mx-auto"
+          />
+        </div>
+        <div class={`md:col-7 lg:col-6 md:order-2 text-balance lg:text-left`}>
+          <h2
+            class="text-3xl lg:text-4xl font-extrabold my-4 text-gray-800 text-center md:text-left"
+          >
+            Lo que confesamos
+          </h2>
+          <p class="mb-8 text-base md:text-lg">
+            En la Iglesia Bautista del Sur, Voz de Salvación somos una
+            <strong>iglesia bautista reformada</strong>, adoptamos la
+            <strong>Confesión Bautista de Fe de Londres de 1689</strong> como nuestra
+            declaración de fe. Creemos en la autoridad suprema de las Escrituras
+            y su inerrancia, la soberanía de Dios en la salvación, la depravación
+            total del hombre, la justificación por la fe sola en Cristo, y la importancia
+            del bautismo y la Cena del Señor como ordenanzas instituidas por Cristo.
+            Nuestra iglesia se dedica a vivir conforme a estas verdades, buscando
+            glorificar a Dios en todo lo que hacemos y proclamando el evangelio de
+            Jesucristo a nuestra comunidad y al mundo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
