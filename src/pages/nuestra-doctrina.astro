@@ -1,6 +1,7 @@
 ---
 import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
+import FiveSolas from "@/partials/FiveSolas.astro";
 ---
 
 <Base title="Iglesia Bautista, Voz de Salvación | Nuestra doctrina">
@@ -21,8 +22,9 @@ import Base from "@/layouts/Base.astro";
           <ImageMod
             class="w-full rounded-lg shadow-md"
             src={"https://files.iglesiabautistadelsur.com/images/confesion_fe.avif"}
-            width={1000}
-            height={1646}
+            width={425}
+            height={700}
+            loading="eager"
             alt={"Confesión Bautista de Fe de 1689"}
             format="webp"
             url={true}
@@ -35,7 +37,7 @@ import Base from "@/layouts/Base.astro";
           >
             Lo que confesamos
           </h2>
-          <div class="mb-8 text-base md:text-lg flex flex-col gap-2">
+          <div class="mb-8 text-lg md:text-xl flex flex-col gap-2">
             <p>
               La Iglesia Bautista del Sur, Voz de Salvación somos una
               <strong>iglesia reformada</strong>, apasionada por la proclamación
@@ -89,14 +91,17 @@ import Base from "@/layouts/Base.astro";
     </div>
   </section>
 
-  <section class="section-sm bg-gradient">
+  <FiveSolas />
+
+  <section class="section-sm">
     <div class="container">
       <div class="row items-center justify-between">
         <h2
-          class="text-3xl lg:text-4xl font-extrabold text-gray-800 text-center"
+          class="text-3xl lg:text-4xl font-extrabold text-gray-800 text-left"
         >
-          Las doctrinas de la Gracia
+          La Iglesia
         </h2>
+        <p>(Próximamente)</p>
       </div>
     </div>
   </section>
