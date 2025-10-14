@@ -11,7 +11,7 @@ const { lang } = Astro.params;
 
 const posts = await getSinglePage(BLOG_FOLDER, lang as keyof ContentEntryMap);
 const sortedPosts = sortByDate(posts);
-const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+const currentPosts = new Array(); //sortedPosts.slice(0, config.settings.pagination);
 ---
 
 <Base title="Iglesia Bautista, Voz de Salvación | Blog">
