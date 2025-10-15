@@ -16,23 +16,29 @@ import Subtitle from "@/components/Subtitle.astro";
           format="webp"
         />
       </div>
-      <div
-        class={`md:col-7 lg:col-6 md:order-2 text-balance lg:text-left`}
-      >
+      <div class={`md:col-7 lg:col-6 md:order-2 text-balance lg:text-left`}>
         <Subtitle value="Creciendo en Dios" />
-        <blockquote class="italic text-gray-500 lg:text-base mb-4 md:text-center text-balance">
+        <blockquote
+          class="italic text-gray-500 lg:text-base mb-4 md:text-center text-balance hidden sm:block"
+        >
           "Que no se gloríe el sabio de su sabiduría, ni el poderoso de su
           poder, ni el rico de su riqueza.Si alguien ha de gloriarse, que se
           gloríe de conocerme y de comprender que yo soy el Señor, que actúo en
           la tierra con gran amor, derecho y justicia, pues es lo que a mí me
           agrada, afirma el Señor." (Jeremías 9:23-24)
         </blockquote>
+        <blockquote
+          class="italic text-gray-500 lg:text-base mb-4 md:text-center text-balance block sm:hidden"
+        >
+          "Si alguien ha de gloriarse, que se gloríe de conocerme y de
+          comprender que yo soy el Señor, que actúo en la tierra con gran amor,
+          derecho y justicia, pues es lo que a mí me agrada, afirma el Señor."
+          (Jer 9:24)
+        </blockquote>
         <p class="mb-8 text-base md:text-lg">
-          En nuestra Iglesia Bautista del Sur Voz de Salvación, anhelamos crecer
-          juntos en el conocimiento y amor de Dios, siguiendo fielmente las
-          Escrituras como nuestra guía y fundamento. Creemos que la Palabra de
-          Dios es la verdad que transforma nuestras vidas, y deseamos que todos
-          puedan experimentar su gracia y sabiduría.
+          Anhelamos crecer juntos en el conocimiento y amor de Dios, siguiendo
+          fielmente las Escrituras como nuestra guía y fundamento. Creemos que
+          la Palabra de Dios es la verdad que transforma nuestras vidas.
         </p>
         <a
           href="/doctrina"

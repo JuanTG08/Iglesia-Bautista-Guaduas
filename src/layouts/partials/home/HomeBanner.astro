@@ -14,11 +14,11 @@ const textColor = `text-${color}`;
   id="BannerBiblia"
 >
   <div class="z-30 relative h-full flex flex-col justify-center items-center">
-    <header class="container flex flex-col gap-10">
+    <header class="container flex flex-col gap-14 sm:gap-10">
       <h1 class={`${textColor} font-medium text-h3 lg:text-h1 text-balance`}>
         {title}
       </h1>
-      <p class={`${textColor} text-xl text-balance`}>
+      <p class={`${textColor} text-xl text-balance hidden md:block`}>
         {subtitle}
       </p>
       <div class="m-0 p-0">
@@ -44,7 +44,7 @@ const textColor = `text-${color}`;
   </div>
   <!-- Flecha animada -->
   <div
-    class="scroll-down-arrow absolute bottom-32 left-1/2 transform -translate-x-1/2 z-30 cursor-pointer"
+    class="scroll-down-arrow absolute bottom-32 sm:bottom-28 lg:bottom-20 left-1/2 transform -translate-x-1/2 z-30 cursor-pointer"
     id="scrollArrow"
   >
     <svg

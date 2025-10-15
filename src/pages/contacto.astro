@@ -1,0 +1,71 @@
+---
+import Base from "@/layouts/Base.astro";
+import Schedule from "@/partials/Schedule.astro";
+---
+
+<Base title="Iglesia Bautista, Voz de Salvación | Contacto">
+  <section class="section-sm">
+    <div class="container">
+      <h1
+        class="text-primary font-bold font-heading leading-tighter tracking-tighter mb-12 md:text-6xl text-5xl text-center text-balance"
+      >
+        ¡Contáctenos!
+      </h1>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="flex flex-col gap-4">
+          <p class="text-lg md:text-xl">
+            Nos encantaría saber de ti. Ya sea que tengas preguntas, comentarios
+            o simplemente quieras saludar, estamos aquí para ayudarte. Puedes
+            contactarnos a través de los siguientes medios:
+          </p>
+          <ul class="list-disc list-inside text-lg md:text-xl">
+            <li>
+              <strong>Teléfono:</strong>
+              <a
+                href="https://wa.me/573214496134?text=Hola,%20deseo%20más%20información%20acerca%20de%20la%20iglesia"
+                target="_blank"
+                class="text-green-600 underline font-bold"
+              >
+                +57 321 4496134 (WhatsApp)
+              </a>
+            </li>
+            <li>
+              <strong>Correo:</strong>
+              <a
+                href="mailto:ibaguvozdesalvacion@gmail.com"
+                class="text-primary underline font-bold"
+              >
+                ibaguvozdesalvacion@gmail.com
+              </a>
+            </li>
+            <li>
+              <strong>Dirección:</strong> Kra 9 #8-20 sur, barrio Villa del Paraíso,
+              Guaduas, Colombia
+            </li>
+          </ul>
+          <p class="text-lg md:text-xl">
+            También puedes visitarnos en persona durante nuestros horarios de
+            servicio. Estamos ubicados en el corazón de la ciudad y siempre
+            estamos felices de recibir nuevos visitantes.
+          </p>
+          <p class="text-lg md:text-xl">¡Esperamos saber de ti pronto!</p>
+        </div>
+
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.2418987815777!2d-74.6023225!3d5.064496899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e40bd006fd82009%3A0x1cfeba260de47dee!2sIglesia%20Bautista%20del%20Sur%2C%20Voz%20de%20Salvaci%C3%B3n!5e0!3m2!1ses-419!2sco!4v1760486509214!5m2!1ses-419!2sco"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            class="bg-gray-100"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Schedule />
+</Base>
